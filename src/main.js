@@ -17,7 +17,7 @@ import VueApollo from 'vue-apollo'
 // dummy apiKey for this to auth to the secured graph
 const headers = {
   Authorization: `apiKey`
-};
+}
 
 // HTTP connexion to the API
 const httpLink = new HttpLink({
