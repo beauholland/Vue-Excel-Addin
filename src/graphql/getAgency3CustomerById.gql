@@ -1,0 +1,31 @@
+query getAgency3CustomerById($customerId: ID!) {
+  getAgency3CustomerById(id: $customerId) {
+  	id
+    givenName
+    familyName
+    dateOfBirth 
+    lastUpdated
+    email
+    personIdentity {
+      identifiers {
+        agencyId
+        customerId
+      }
+    }
+
+    currentAddress {
+      address
+      state
+      postCode
+      lastUpdated
+    } 
+    previousAddresses {
+      address
+      state
+      postCode
+      lastUpdated
+      agencyId
+    } 
+  }
+    
+}

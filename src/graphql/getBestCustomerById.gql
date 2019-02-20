@@ -1,0 +1,38 @@
+query getBestCustomerById ($customerId:ID!) {
+  getBestCustomerById(id: $customerId) {
+        personIdentity{
+      identifiers
+      {
+        agencyId
+        customerId
+      }
+    }
+    id
+    givenName
+    familyName
+	dateOfBirth
+    email    
+    currentAddress{
+      address1
+      address2
+      address3
+      address4
+      postCode      
+      state
+      lastUpdated
+      
+    }
+    lastUpdated
+    previousAddresses{
+      address1
+      address2
+      address3
+      address4
+      postCode      
+      state
+      lastUpdated
+      agencyId
+    }
+  }
+}
+
